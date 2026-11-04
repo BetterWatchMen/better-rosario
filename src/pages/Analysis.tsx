@@ -267,3 +267,4 @@ export default function Analysis() {
     </main>
   );
 }
+

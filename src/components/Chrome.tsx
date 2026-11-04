@@ -18,37 +18,19 @@ const NAV = [
 ];
 
 export function Masthead() {
-  const { config, client } = usePortal();
+  const { config } = usePortal();
   const { pathname, hash } = useLocation();
   const today = useMemo(
     () => new Date().toLocaleDateString('en-PH', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }),
     [],
   );
   return (
-    <>
-    {config.buildYourOwnStrip !== false && (
-      // Above the masthead, so it scrolls away; a plain link to the source.
-      <a className="build-strip" href={SOURCE_CODE_URL} target="_blank" rel="noopener">
-        <span className="build-strip-title">Create your own transparency portal</span>
-        <span className="build-strip-url">
-          {SOURCE_CODE_URL.replace(/^https:\/\//, '')} <span aria-hidden="true">→</span>
-        </span>
-      </a>
-    )}
     <header className="masthead">
       <div className="masthead-top">
         <div className="page masthead-top-inner">
           <span className="muted">{today}</span>
-          <span className="masthead-links">
-            <a href={NATIONAL_URL} target="_blank" rel="noopener">
-              National picture <span aria-hidden="true">↗</span>
-            </a>
-            <a href={`${client.base}/docs`} target="_blank" rel="noopener">
-              API <span aria-hidden="true">↗</span>
-            </a>
-            <a href={SOURCE_CODE_URL} target="_blank" rel="noopener">
-              Build your own <span aria-hidden="true">↗</span>
-            </a>
+          <span className="muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            Region IV-A · Batangas 4th District
           </span>
         </div>
       </div>
@@ -87,7 +69,6 @@ export function Masthead() {
         </div>
       </nav>
     </header>
-    </>
   );
 }
 
@@ -118,16 +99,16 @@ export function Footer() {
             </span>
           </li>
           <li>
-            <span className="label">Every project, nationwide</span>
+            <span className="label">National Picture</span>
             <a href={NATIONAL_URL} target="_blank" rel="noopener">budget.bettergov.ph ↗</a>
           </li>
           <li>
-            <span className="label">Data</span>
-            <a href={`${client.base}/docs`} target="_blank" rel="noopener">Budget API and MCP ↗</a>
+            <span className="label">Budget API</span>
+            <a href={`${client.base}/docs`} target="_blank" rel="noopener">BetterGov API & Docs ↗</a>
           </li>
           <li>
-            <span className="label">Open source</span>
-            <a href={SOURCE_CODE_URL} target="_blank" rel="noopener">Fork this portal for your LGU or DPWH office ↗</a>
+            <span className="label">Build Your Own</span>
+            <a href={SOURCE_CODE_URL} target="_blank" rel="noopener">Create your own transparency portal (Open Source) ↗</a>
           </li>
         </ul>
       </div>
