@@ -162,3 +162,4 @@ export const LOCAL_HOSPITALS = [
   { name: 'Christ the Savior Medical Center', type: 'Private Hospital', landline: '(043) 740-1412', mobile: '0994-584-1895', address: 'Rosario, Batangas' },
   { name: 'Metro Rosario Medical Center', type: 'Private Hospital', landline: '(043) 403-7338', mobile: '0954-225-9218 / 0919-765-9421', address: 'Gualberto Ave., Rosario, Batangas' },
 ];
+

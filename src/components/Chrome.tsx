@@ -9,6 +9,7 @@ const BETTERGOV_LOGO = '/brand/bettergov-horizontal-primary.png';
 
 const NAV = [
   { to: '/', hash: '', label: '2027 Projects' },
+  { to: '/analysis', hash: '', label: 'Budget Analysis' },
   { to: '/barangays', hash: '', label: '48 Barangays' },
   { to: '/leadership', hash: '', label: 'Leadership & LGU' },
   { to: '/services', hash: '', label: 'Emergency Hotlines' },

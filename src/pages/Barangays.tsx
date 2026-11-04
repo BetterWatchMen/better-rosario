@@ -133,3 +133,4 @@ export default function Barangays() {
     </main>
   );
 }
+

@@ -10,6 +10,7 @@ import Enacted from './pages/Enacted';
 import Barangays from './pages/Barangays';
 import Leadership from './pages/Leadership';
 import Services from './pages/Services';
+import Analysis from './pages/Analysis';
 
 export default function App() {
   const { config } = usePortal();
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         {/* Offices and their districts are a section of the main page; old links land there. */}
         <Route path="/districts" element={<Navigate to="/#offices" replace />} />
+        <Route path="/analysis" element={<Analysis />} />
         <Route path="/barangays" element={<Barangays />} />
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/services" element={<Services />} />

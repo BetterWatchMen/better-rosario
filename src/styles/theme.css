@@ -1,40 +1,45 @@
 /* =============================================================
-   Theme: the budget.bettergov.ph tokens, so every portal reads as
-   part of the same family. Change the accent here if a fork must,
-   but keep the type roles.
-
-   Republic of the Philippines brand guidelines, section 04:
-   "Figtree speaks. Inter works. Mono labels."
+   Theme: Editorial Civic (BetterCalatagan inspired)
+   Warm paper canvas (#fbfbfa), distinguished deep navy,
+   refined cards, and crisp typography.
    ============================================================= */
 
 :root {
-  /* Paper and ink */
-  --paper: #ffffff;
-  --paper-2: #f4f7fc;
-  --paper-3: #eceef2;
-  --rule: #d4d8e0;
-  --rule-soft: #e7eaef;
-  --ink: #11151c;
-  --ink-2: #2b3340;
-  --ink-3: #5b6373;
-  --ink-mute: #8a92a1;
+  /* Paper and ink: warm editorial tones */
+  --paper: #fbfbfa;
+  --paper-card: #ffffff;
+  --paper-2: #f4f3ef;
+  --paper-3: #eae7e1;
+  --rule: #dedad2;
+  --rule-soft: #eae7e1;
+  --ink: #141821;
+  --ink-2: #2d3442;
+  --ink-3: #5c667a;
+  --ink-mute: #8c96a8;
 
-  /* Accents */
-  --accent: #0b4fd9;        /* BetterGov blue */
-  --accent-deep: #0a44bd;
-  --accent-soft: #e8efff;
-  --positive: #3a6b3a;
-  --negative: #b8341f;
-  --neutral: #8a7c5a;
+  /* Accents: Deep Heritage Navy & civic tones */
+  --accent: #173863;
+  --accent-deep: #0e2440;
+  --accent-soft: #eaf0f8;
+  --accent-warm: #c25e2e; /* terracotta highlight */
+  --positive: #266b44;
+  --negative: #b92c2c;
+  --neutral: #826e4e;
 
-  /* Type roles */
-  --font-hero: "Figtree", "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography */
+  --font-hero: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-  /* Layout */
+  /* Spacing & Radii */
   --page: 1280px;
   --gutter: 32px;
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 * { box-sizing: border-box; }
@@ -52,7 +57,7 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-#root { min-height: 100svh; display: flex; flex-direction: column; }
+#root { min-height: 100svh; display: flex; flex-direction: column; background: var(--paper); }
 
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--accent-deep); }
@@ -62,12 +67,13 @@ button { cursor: pointer; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: var(--font-hero);
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.12;
+  line-height: 1.15;
   margin: 0;
+  color: var(--ink);
 }
 
 .sr-only {
@@ -75,11 +81,11 @@ h1, h2, h3 {
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
-/* Mono labels: metadata only, never sentences. */
+/* Mono labels */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
@@ -92,6 +98,7 @@ h1, h2, h3 {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-3);
+  font-weight: 500;
 }
 .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .muted { color: var(--ink-3); }
