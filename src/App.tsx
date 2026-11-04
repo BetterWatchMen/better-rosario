@@ -26,10 +26,11 @@ export default function App() {
         </div>
       )}
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Offices and their districts are a section of the main page; old links land there. */}
-        <Route path="/districts" element={<Navigate to="/#offices" replace />} />
-        <Route path="/analysis" element={<Analysis />} />
+        <Route path="/" element={<Analysis />} />
+        <Route path="/projects" element={<Home />} />
+        {/* Offices and their districts are a section of the projects page; old links land there. */}
+        <Route path="/districts" element={<Navigate to="/projects#offices" replace />} />
+        <Route path="/analysis" element={<Navigate to="/" replace />} />
         <Route path="/barangays" element={<Barangays />} />
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/services" element={<Services />} />
@@ -40,7 +41,7 @@ export default function App() {
           path="*"
           element={
             <main className="page main">
-              <p className="state">This page does not exist. <Link to="/">See every project</Link></p>
+              <p className="state">This page does not exist. <Link to="/">Back to home</Link></p>
             </main>
           }
         />

@@ -358,7 +358,7 @@ export default function Analysis() {
             </p>
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
-            <Link to="/" className="button button-primary">
+            <Link to="/projects" className="button button-primary">
               View All 2027 Projects →
             </Link>
             <Link to="/barangays" className="button button-quiet">
