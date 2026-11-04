@@ -1,32 +1,26 @@
 /**
  * This portal's configuration: the only file a fork needs to edit.
- * What each field means: src/config.ts. Generate one with `npm run setup`;
- * check it against the live API with `npm run check`.
- *
- * This default is a worked example: the Province of Bohol. Its three DPWH
- * district engineering offices bring in every DPWH line listed under them;
- * the place name brings in lines from all four programs whose title names
- * Bohol (Central Office projects, farm-to-market roads, health facilities,
- * irrigation). More examples in examples/.
+ * What each field means: src/config.ts. Check it against the live API: `npm run check`.
  */
-import { defineConfig } from './src/config';
+import { defineConfig } from './src/config.ts';
 
 export default defineConfig({
-  id: 'bohol-province',
-  kind: 'province',
-  name: 'Province of Bohol',
-  shortName: 'Bohol',
-  operator: { name: 'BetterGov.ph', url: 'https://bettergov.ph' },
-  // Where this example is deployed. Change it (or remove it) in your fork.
-  siteUrl: 'https://transparency-portal.bettergov.workers.dev',
+  id: 'rosario-batangas',
+  kind: 'municipality',
+  name: 'Municipality of Rosario, Batangas',
+  shortName: 'Rosario',
+  operator: {
+    name: 'BetterWatchMen',
+    url: 'https://github.com/BetterWatchMen/better-rosario',
+  },
+  siteUrl: 'https://better-rosario.vercel.app',
   scope: {
-    offices: [
-      'Bohol 1st District Engineering Office',
-      'Bohol 2nd District Engineering Office',
-      'Bohol 3rd District Engineering Office',
+    // Every line in the four programs whose title names Rosario, Batangas
+    places: [
+      { label: 'Rosario', q: 'Rosario, Batangas', region: 'IV-A' },
     ],
-    places: [{ label: 'Bohol', region: 'VII' }],
-    districts: ['leg:bohol:1st', 'leg:bohol:2nd', 'leg:bohol:3rd'],
+    // 4th Legislative District of Batangas (Rep. Amado Carlos IV A. Bolilia)
+    districts: ['leg:batangas:4th'],
     exclude: [],
   },
   reporting: { enabled: false },
