@@ -26,13 +26,15 @@ export default function App() {
         </div>
       )}
       <Routes>
-        <Route path="/" element={<Analysis />} />
-        <Route path="/projects" element={<Home />} />
-        {/* Offices and their districts are a section of the projects page; old links land there. */}
-        <Route path="/districts" element={<Navigate to="/projects#offices" replace />} />
-        <Route path="/analysis" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<Home />} />
+        {/* Offices and their districts are a section of the main page; old links land there. */}
+        <Route path="/districts" element={<Navigate to="/#offices" replace />} />
+        <Route path="/projects" element={<Navigate to="/" replace />} />
+        <Route path="/overview" element={<Analysis />} />
+        <Route path="/analysis" element={<Navigate to="/overview" replace />} />
         <Route path="/barangays" element={<Barangays />} />
-        <Route path="/leadership" element={<Leadership />} />
+        <Route path="/governance" element={<Leadership />} />
+        <Route path="/leadership" element={<Navigate to="/governance" replace />} />
         <Route path="/services" element={<Services />} />
         <Route path="/gaa" element={<Enacted />} />
         <Route path="/about" element={<About />} />

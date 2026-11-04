@@ -118,7 +118,7 @@ export default function Barangays() {
                 </div>
                 <div role="cell" className="r">
                   <Link
-                    to={`/projects?q=${encodeURIComponent(cleanName)}`}
+                    to={`/?q=${encodeURIComponent(cleanName)}`}
                     className="button button-quiet small"
                     title={`View projects mentioning ${b.name}`}
                   >

@@ -3,18 +3,18 @@ import { MUNICIPAL_LEADERSHIP } from '../data/rosario-data';
 import { useTitle } from '../lib/use-title';
 
 export default function Leadership() {
-  useTitle('Local Leadership & Municipal Accountability · Rosario, Batangas');
+  useTitle('Municipal Leadership & Governance · Rosario, Batangas');
 
   return (
     <main className="page main">
       <PageHead
-        eyebrow="Local Governance · Citizen Oversight"
-        title="Municipal Leadership & Accountability"
+        eyebrow="Local Governance · Public Records"
+        title="Municipal Leadership & Public Governance"
       >
         <p>
-          Transparency requires knowing who holds the mandate to propose, approve, and execute public funds.
-          Here is the official roster of executive and legislative leadership for the Municipality of Rosario, Batangas,
-          along with legal mechanisms citizens can use to scrutinize local spending.
+          Official roster of executive and legislative leadership for the Municipality of Rosario, Batangas,
+          along with statutory public disclosure resources (DILG Full Disclosure Portal, COA reports, PhilGEPS)
+          available to every citizen under Philippine law.
         </p>
       </PageHead>
 
@@ -75,11 +75,11 @@ export default function Leadership() {
         </div>
       </div>
 
-      {/* Citizen Oversight Toolkit */}
+      {/* Citizen Resources */}
       <div className="section" style={{ borderTop: '2px solid var(--ink)', paddingTop: '32px' }}>
-        <h2 className="section-h">Citizen Accountability Toolkit</h2>
+        <h2 className="section-h">Public Records & Transparency Resources</h2>
         <p className="lede" style={{ marginBottom: '24px' }}>
-          Under Philippine law, citizens have the constitutional and statutory right to access official local government records:
+          Official government portals where citizens can access audited financial statements, procurement notices, and municipal legislation:
         </p>
 
         <div className="two-col">

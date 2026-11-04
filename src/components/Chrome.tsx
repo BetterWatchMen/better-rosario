@@ -8,10 +8,10 @@ import { NATIONAL_URL, SOURCE_CODE_URL } from '../lib/links';
 const BETTERGOV_LOGO = '/brand/bettergov-horizontal-primary.png';
 
 const NAV = [
-  { to: '/', hash: '', label: 'Budget Analysis' },
-  { to: '/projects', hash: '', label: '2027 Projects' },
+  { to: '/', hash: '', label: '2027 projects' },
+  { to: '/overview', hash: '', label: 'Budget Overview' },
   { to: '/barangays', hash: '', label: '48 Barangays' },
-  { to: '/leadership', hash: '', label: 'Leadership & LGU' },
+  { to: '/governance', hash: '', label: 'Local Governance' },
   { to: '/services', hash: '', label: 'Emergency Hotlines' },
   { to: '/gaa', hash: '', label: 'Budgets 2020–2026' },
   { to: '/about', hash: '', label: 'About the data' },
