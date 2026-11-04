@@ -13,7 +13,7 @@ export default defineConfig({
     name: 'BetterWatchMen',
     url: 'https://github.com/BetterWatchMen/better-rosario',
   },
-  siteUrl: 'https://better-rosario.vercel.app',
+  siteUrl: 'https://rosario-betterbatangas.vercel.app',
   scope: {
     // Every line in the four programs whose title names Rosario, Batangas
     places: [
