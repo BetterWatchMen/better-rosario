@@ -7,6 +7,9 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Project from './pages/Project';
 import Enacted from './pages/Enacted';
+import Barangays from './pages/Barangays';
+import Leadership from './pages/Leadership';
+import Services from './pages/Services';
 
 export default function App() {
   const { config } = usePortal();
@@ -25,6 +28,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         {/* Offices and their districts are a section of the main page; old links land there. */}
         <Route path="/districts" element={<Navigate to="/#offices" replace />} />
+        <Route path="/barangays" element={<Barangays />} />
+        <Route path="/leadership" element={<Leadership />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/gaa" element={<Enacted />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects/:dataset/:id" element={<Project />} />
